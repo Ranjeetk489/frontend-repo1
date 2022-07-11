@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.google.com/specimen/Montserrat");
+      @import url("https://fonts.google.com/specimen/Fraunces");
+      
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      
+
+      .container {
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+        margin: 4rem 0;
+        
+      }
+
+      .pd-container {
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        padding-left: 2rem;
+      } 
+      .title {
+        text-transform: uppercase;
+        color: hsl(228, 12%, 48%);
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: Montserrat, sans-serif;
+        letter-spacing: 3px;
+      }
+      .sub-title {
+        color: hsl(212, 21%, 14%);
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: Fraunces, sans-serif;
+        margin: 1rem 0  1rem 0;
+      }
+      .desc {
+        color: hsl(228, 12%, 48%);
+        font-size: 14px;
+        font-weight: 500;
+        font-family: Montserrat, sans-serif;
+        margin: 1rem 0;
+      }
+
+      .price-container {
+        display: flex;
+        align-items: center;
+      }
+      .price {
+        color: hsl(158, 36%, 37%);
+        font-size: 2.4rem;
+        font-weight: 700; 
+        font-family: Montserrat, sans-serif;
+      }
+      .cross {
+        color: hsl(228, 12%, 48%);
+        font-size: 1rem;
+        margin-left: 0.8rem;
+        text-decoration: line-through;
+      }
+
+      .cta {
+        font-size: 1rem;
+        font-weight: 700;
+        padding:12px;
+        margin-top: 2rem;
+        background:hsl(158, 36%, 37%);
+        border: none;
+        color: hsl(0, 0%, 100%);
+        border-radius: 12px;
+      }
+
+      .cart-ic {
+        transform: translate(-4px,2px);
+      }
+
+      @media only screen and (max-width: 480px) {
+        .container {
+          flex-direction:column;
+          
+        }
+        .pd-container{
+          width: 250px;
+          padding: 0;
+        }
+        .img {
+          height: 300px;
+          width: 250px;
+        }
+        .title {
+          font-size: 14px;
+          margin-top: 10px;
+        }
+        .sub-title {
+          font-size: 1.7rem;
+          margin: 10px 0 10px 0;
+        }
+        .desc{
+          margin: 0 0 14px  0;
+        }
+        .price {
+          font-size: 2rem;
+        }
+        .cross {
+          font-size: 1rem;
+        }
+        .cta {
+          margin-top: 1rem;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <picture class="img-container">
+        <source
+          media="(min-width:480px)"
+          srcset="./images/image-product-desktop.jpg"
+        />
+        <img src="./images//image-product-mobile.jpg" width="250" height="400" alt=""  class="img"/>
+      </picture>
+      <!-- <img src="./images/image-product-desktop.jpg" alt="" media ="(max-width:300px)"> -->
+
+      <div class="pd-container">
+        <span class="title">Preview</span>
+
+        <span class="sub-title"> Gabrielle Essence Eau De Parfum </span>
+
+        <span class="desc">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </span>
+        <div class="price-container">
+        <span class="price">$149.99</span>
+        <span class="price cross"> $169.99 </span>
+      </div>
+        <button class="cta"> <img class="cart-ic" src="./images/icon-cart.svg" alt=""> Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
